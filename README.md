@@ -1,2 +1,2 @@
-# SRA-DockerFiles
-DockerFiles for SRA pipeline
+# DockerFiles
+Docker Files created for BICF pipeline workflows

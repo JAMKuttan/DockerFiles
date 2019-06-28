@@ -6,7 +6,7 @@ LABEL Author="Jeremy Mathews" \
 WORKDIR /tmp
 
 RUN apt-get update -y && \
-    apt-get install -y wget && \
+    apt-get install -y wget unzip && \
     apt-get clean && \
     wget -P / "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip" && \
     unzip fastqc_v0.11.5.zip && \

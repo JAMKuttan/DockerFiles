@@ -6,7 +6,7 @@ LABEL Author="Jeremy Mathews" \
 WORKDIR /tmp
 
 RUN apt-get update -y && \
-    apt-get install -y wget git g++ && \
+    apt-get install -y wget git g++ python-pip && \
     apt-get clean && \
     wget -P / "https://bootstrap.pypa.io/get-pip.py" && \
     python get-pip.py && \

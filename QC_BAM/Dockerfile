@@ -18,7 +18,7 @@ RUN ./configure
 RUN make && make install
 
 WORKDIR /usr/bin
-RUN conda install -c bioconda fastqc=0.11.5-1
+RUN conda install -c bioconda fastqc=0.11.5
 
 RUN git clone https://github.com/broadinstitute/picard.git && \
     cd picard/ && \

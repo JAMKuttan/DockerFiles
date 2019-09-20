@@ -6,7 +6,7 @@ Maintainer=BICF@UTSouthwestern.edu
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --fix-missing
-RUN apt-get install -y autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev bedtools openjdk-8-jre-headless
+RUN apt-get install -y autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev bedtools
 
 WORKDIR /usr/bin
 RUN wget https://github.com/samtools/samtools/releases/download/1.6/samtools-1.6.tar.bz2 && \
@@ -23,6 +23,7 @@ RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.
     chmod 755 fastqc
 
 WORKDIR /usr/bin
+RUN apt install openjdk-8-jdk
 RUN wget https://github.com/broadinstitute/picard/releases/download/2.10.3/picard.jar -O picard.jar
     java -jar /usr/bin/picard.jar
 

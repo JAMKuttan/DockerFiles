@@ -22,6 +22,6 @@ RUN conda install -c bioconda fastqc=0.11.5
 
 RUN git clone https://github.com/broadinstitute/picard.git
 RUN cd picard/
-RUN gradlew shadowJar
+RUN ./gradlew shadowJar
 
 WORKDIR /data

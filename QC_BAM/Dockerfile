@@ -16,9 +16,13 @@ WORKDIR /usr/bin//samtools-1.6
 RUN ./configure
 RUN make && make install
 
-RUN apt-get install -y default-jdk
-    conda install -c bioconda fastqc=0.11.5--1
+WORKDIR /usr/bin
+RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip --no-check-certificate && \
+    unzip fastqc_v0.11.5.zip && \
+    cd FastQC/ && \
+    chmod 755 fastqc
 
+WORKDIR /usr/bin
 RUN wget https://github.com/broadinstitute/picard/releases/download/2.10.3/picard.jar -O picard.jar
     java -jar /usr/bin/picard.jar
 

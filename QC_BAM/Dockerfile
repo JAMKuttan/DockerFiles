@@ -21,6 +21,6 @@ WORKDIR /usr/bin
 RUN conda install -c bioconda fastqc=0.11.5
 
 RUN git clone https://github.com/broadinstitute/picard.git && cd picard/
-RUN chmod +x ./gradlew shadowJar
+RUN chmod +x ./gradlew && ./gradlew shadowJar
 
 WORKDIR /data

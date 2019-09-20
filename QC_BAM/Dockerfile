@@ -6,7 +6,7 @@ Maintainer=BICF@UTSouthwestern.edu
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --fix-missing
-RUN apt-get install -y autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev bedtools
+RUN apt-get install -y autoconf automake make gcc perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev bedtools unzip
 
 WORKDIR /usr/bin
 RUN wget https://github.com/samtools/samtools/releases/download/1.6/samtools-1.6.tar.bz2 && \

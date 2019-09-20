@@ -12,7 +12,7 @@ WORKDIR /usr/bin
 RUN wget https://github.com/samtools/samtools/releases/download/1.6/samtools-1.6.tar.bz2 && \
     tar -xvjf samtools-1.6.tar.bz2 && \
     rm samtools-1.6.tar.bz2 && \
-    cd samtools-1.6/
+WORKDIR /usr/bin//samtools-1.6
 RUN ./configure
 RUN make && make install
 
@@ -26,7 +26,7 @@ WORKDIR /usr/bin
 RUN wget --continue --no-check-certificate -O jdk-8u191-linux-x64.tar.gz --header "Cookie: oraclelicense=a" https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz && \
     tar -xvf jdk-8u191-linux-x64.tar.gz && \
     rm jdk-8u191-linux-x64.tar.gz && \
-    cd jdk-8u191-linux-x64/
+WORKDIR /usr/bin//jdk-8u191-linux-x64
 RUN ./configure
 RUN make && make install
 

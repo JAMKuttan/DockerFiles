@@ -33,6 +33,5 @@ RUN make && make install
 WORKDIR /usr/bin
 RUN apt install openjdk-8-jdk
 RUN wget https://github.com/broadinstitute/picard/releases/download/2.10.3/picard.jar -O picard.jar
-    java -jar /usr/bin/picard.jar
 
 WORKDIR /data

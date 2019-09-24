@@ -40,4 +40,4 @@ RUN chmod +x /usr/local/bin/picard.jar
 
 WORKDIR /data/
 
-CMD ["/usr/local/bin/bwa"]
+CMD ["/usr/local/bin"]

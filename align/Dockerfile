@@ -29,7 +29,7 @@ RUN cd /opt; wget https://github.com/samtools/bcftools/releases/download/1.9/bcf
 
 
 #Bedtools
-RUN cd /opt; wget https://github.com/arq5x/bedtools2/releases/download/v2.28.0/bedtools-2.28.0.tar.gz; tar xvfz bedtools-2.28.0.tar.gz; cd bedtools2; make; cp bin/* /opt/bin
+RUN cd /opt; wget https://github.com/arq5x/bedtools2/releases/download/v2.28.0/bedtools-2.28.0.tar.gz; tar xvfz bedtools-2.28.0.tar.gz; cd bedtools2; make; cd ..; cp bedtools2 /opt/bin
 
 # Install FGBio and Picard
 RUN cd /opt/bin; wget https://github.com/fulcrumgenomics/fgbio/releases/download/0.8.1/fgbio-0.8.1.jar
